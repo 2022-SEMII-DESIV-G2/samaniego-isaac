@@ -28,24 +28,24 @@ public class App {
 
         before((request, response) -> response.header("Access-Control-Allow-Origin", "*"));
 
-
         get("/hello", (req, res) -> {
-            res.type("aplication/jason");
+            res.type("aplication/json");
             JSONObject jsonobj = new JSONObject(pyramidsobj);
             return jsonobj;
         });
         get("/hello/:id", (req, res) -> {
             res.type("application/json");
             JSONObject jsonobj = new JSONObject(pyramidsobj.getPyramid().get(Integer.parseInt(req.params(":id")) - 1));
-            return jsonobj;});
-        
+            return jsonobj;
+        });
+
         post("/hello", (req, res) -> {
-            res.type("aplication/jason");
+            res.type("aplication/json");
             Pyramid pyr = new Pyramid();
             JSONObject reqbody = new JSONObject(req.body());
             pyr.setPyramid(reqbody.getString("pyramid"));
             pyr.setRute(reqbody.getString("rute"));
-            pyr.setId(pyramidsobj.getPyramid().size()+1);
+            pyr.setId(pyramidsobj.getPyramid().size() + 1);
             pyramidsobj.addPyramidlist(pyr);
             JSONObject numobj = new JSONObject(pyramidsobj);
             return numobj;
