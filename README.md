@@ -1,5 +1,5 @@
   ![Alt Text](https://media.giphy.com/media/ACzsN9dhQuOZ6RYXcM/giphy.gif)
-  ## hello 😄 my name is isaac samaniego and this is my repository of the class. 👌 <br>
+  ## hello 😄 my name is Isaac Samaniego and this is my repository of the class. 👌 <br>
   ### This is a small space dedicated to my university (UTP) projects.  <br>
   ### Having said that, I will tell you who I am.  <br>
   ### I'm a guy who is just starting in web development.  <br>
