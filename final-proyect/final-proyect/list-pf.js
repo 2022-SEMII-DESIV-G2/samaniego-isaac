@@ -6,7 +6,7 @@
   let count = Object.keys(nose.data.pyramid).length;
   console.log(count);
 
-  const cars = document.querySelector(".pyramid");
+  // const cars = document.querySelector(".pyramid");
   let newList = "<ul>";
   for (let index = 0; index < count; index++) {
     newList += `<li><a href="detail.html?q=${nose.data.pyramid[index].id}">Pyramid n° ${nose.data.pyramid[index].id}</a></li>`;

@@ -72,20 +72,24 @@ function reccorrido() {
   let output2= '';
   let aux = recor[0][0];
   let aux2 = 0;
-  for (let i = 1; i < recor.length; i++) {
+  for (let i = 1; i <= recor.length; i++) {
     let max = aux2;
 
-    if (recor[i][aux2]) {
-      max += aux2 + 1;
+    if (recor[i][aux2 +1]) {
+      max = aux2;
+      console.log(max);
     }
     if (recor[i][aux2 + 1]) {
       if (recor[i][max] < recor[i][aux2 + 1]) {
-        max += aux2 + 1;
+        max = aux2 + 1;
+        console.log(max);
       }
     }
     aux += recor[i][max];
-    aux += max;
-    document.querySelector(`.item${i}-level${aux2}`).style.background='#e3d0d8';    
+    aux2 = max;
+    console.log(aux, aux2, max, i);
+    let element = document.querySelector(`.item${i}-level${aux2}`);
+    if(element){element.style.background='#e3d0d8';}    
   }
   console.log(pyramid);
     output2 += `<p> aux is: ${aux} </p><br>`
